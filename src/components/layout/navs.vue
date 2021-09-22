@@ -2,7 +2,7 @@
   <div class="bg-fff">
     <div class="border-b pr" @mouseleave="mouseleave">
       <div class="w flex flex-b ai-c nav">
-        <img src="../../assets/logo1.png" alt="" class="img-56" />
+        <img src="../../assets/logo1.png" alt="" class="img-56" @click="load" />
         <div v-if="recom" class="center f16 co-333">
           <div
             v-for="(item, index) in recom"
@@ -90,6 +90,14 @@ export default {
   },
   components: {},
   methods: {
+    // 点击logo
+    load() {
+      if (this.$route.path === '/') {
+        location.reload();
+      } else {
+        this.$router.push('/');
+      }
+    },
     getHots() {
       this.$api.getSearchWords().then((res) => {
         if (res.code === 200) {

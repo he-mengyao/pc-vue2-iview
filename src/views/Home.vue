@@ -18,7 +18,7 @@
           <div class="center">扫码领取新人百元礼包</div>
         </div>
       </div>
-      <div class="border center arrow" v-if="show">
+      <div class="border center arrow" v-if="show" @click="top">
         <i class="iconfont icon-huidingbu f24"></i>
       </div>
     </div>
@@ -48,6 +48,9 @@ export default {
   methods: {
     handleScroll(e) {
       this.show = e.layerY > 1000;
+    },
+    top() {
+      window.scrollTo(0, 0);
     },
   },
   mounted() {
