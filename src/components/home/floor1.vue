@@ -18,7 +18,7 @@
           <div
             v-for="(item1, index1) in Object.values(item.list[0].list[0])[0]"
             :key="index1"
-            class="w-234 pdtb-20 bg-fff col-center mrb-20 cursor tr"
+            class="w-234 pdtb-20 bg-fff col-center mrb-20 cursor as"
             @click="click(item1)"
           >
             <img :src="item1.cover" alt="" class="img" />
@@ -84,13 +84,5 @@ export default {
 .img {
   width: 160px;
   height: 160px;
-}
-
-.tr {
-  // animation: all 0.5s linear;
-  &:hover {
-    box-shadow: 0 15px 30px rgb(0 0 0 / 10%);
-    transform: translate3d(0, -2px, 0);
-  }
 }
 </style>

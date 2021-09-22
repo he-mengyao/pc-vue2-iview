@@ -4,6 +4,11 @@
         box-sizing: border-box;
     }
     
+    .as:hover {
+        box-shadow: 0 15px 30px rgb(0 0 0 / 10%);
+        transform: translate3d(0, -2px, 0);
+    }
+    
     html,
     body {
         height: 100%;
@@ -509,8 +514,7 @@
     
     .text1 {
         position: relative;
-        background-color: #4190f7;
-        color: #fff;
+        background-color: #fff;
     }
     
     .text1::after {
@@ -520,7 +524,7 @@
         height: 0px;
         border-width: 8px 0 10px 16px;
         border-style: solid;
-        border-color: transparent transparent transparent #4190f7;
+        border-color: transparent transparent transparent #fff;
     }
     
     .text-common {

@@ -102,6 +102,10 @@ export default {
   background-color: #424242;
   width: 120px;
   height: 40px;
+  &:hover {
+    background-color: #fff;
+    color: #ed702e;
+  }
 }
 .notice:hover {
   color: #ffffff;
